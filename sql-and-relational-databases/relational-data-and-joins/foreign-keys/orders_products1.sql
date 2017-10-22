@@ -13,12 +13,12 @@ SET search_path = public, pg_catalog;
 
 ALTER TABLE ONLY public.orders DROP CONSTRAINT orders_product_id_fkey;
 ALTER TABLE ONLY public.products DROP CONSTRAINT products_pkey;
-ALTER TABLE ONLY public.orders DROP CONSTRAINT orderd_pkey;
+ALTER TABLE ONLY public.orders DROP CONSTRAINT orders_pkey;
 ALTER TABLE public.products ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.orders ALTER COLUMN id DROP DEFAULT;
 DROP SEQUENCE public.products_id_seq;
 DROP TABLE public.products;
-DROP SEQUENCE public.orderd_id_seq;
+DROP SEQUENCE public.orders_id_seq;
 DROP TABLE public.orders;
 DROP EXTENSION plpgsql;
 DROP SCHEMA public;
@@ -57,7 +57,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: orders; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+-- Name: orders; Type: TABLE; Schema: public; Owner: -; Tablespace:
 --
 
 CREATE TABLE orders (
@@ -68,10 +68,10 @@ CREATE TABLE orders (
 
 
 --
--- Name: orderd_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: orders_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
-CREATE SEQUENCE orderd_id_seq
+CREATE SEQUENCE orders_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -80,14 +80,14 @@ CREATE SEQUENCE orderd_id_seq
 
 
 --
--- Name: orderd_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: orders_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE orderd_id_seq OWNED BY orders.id;
+ALTER SEQUENCE orders_id_seq OWNED BY orders.id;
 
 
 --
--- Name: products; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+-- Name: products; Type: TABLE; Schema: public; Owner: -; Tablespace:
 --
 
 CREATE TABLE products (
@@ -119,7 +119,7 @@ ALTER SEQUENCE products_id_seq OWNED BY products.id;
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY orders ALTER COLUMN id SET DEFAULT nextval('orderd_id_seq'::regclass);
+ALTER TABLE ONLY orders ALTER COLUMN id SET DEFAULT nextval('orders_id_seq'::regclass);
 
 
 --
@@ -130,10 +130,10 @@ ALTER TABLE ONLY products ALTER COLUMN id SET DEFAULT nextval('products_id_seq':
 
 
 --
--- Name: orderd_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+-- Name: orders_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('orderd_id_seq', 1, false);
+SELECT pg_catalog.setval('orders_id_seq', 1, false);
 
 
 --
@@ -156,15 +156,15 @@ SELECT pg_catalog.setval('products_id_seq', 1, false);
 
 
 --
--- Name: orderd_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+-- Name: orders_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
 --
 
 ALTER TABLE ONLY orders
-    ADD CONSTRAINT orderd_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT orders_pkey PRIMARY KEY (id);
 
 
 --
--- Name: products_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+-- Name: products_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
 --
 
 ALTER TABLE ONLY products
@@ -173,4 +173,3 @@ ALTER TABLE ONLY products
 --
 -- PostgreSQL database dump complete
 --
-
