@@ -50,7 +50,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: films; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+-- Name: films; Type: TABLE; Schema: public; Owner: -; Tablespace:
 --
 
 CREATE TABLE films (
@@ -73,12 +73,13 @@ INSERT INTO films VALUES ('Die Hard', 1988, 'action', 'John McTiernan', 132);
 INSERT INTO films VALUES ('Casablanca', 1942, 'drama', 'Michael Curtiz', 102);
 INSERT INTO films VALUES ('The Conversation', 1974, 'thriller', 'Francis Ford Coppola', 113);
 INSERT INTO films VALUES ('1984', 1956, 'scifi', 'Michael Anderson', 90);
+INSERT INTO films VALUES ('The Godfather', 1972, 'crime', 175, 3);
 INSERT INTO films VALUES ('Tinker Tailor Soldier Spy', 2011, 'espionage', 'Tomas Alfredson', 127);
 INSERT INTO films VALUES ('The Birdcage', 1996, 'comedy', 'Mike Nichols', 118);
 
 
 --
--- Name: title_unique; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+-- Name: title_unique; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
 --
 
 ALTER TABLE ONLY films
@@ -88,4 +89,3 @@ ALTER TABLE ONLY films
 --
 -- PostgreSQL database dump complete
 --
-
