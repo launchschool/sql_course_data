@@ -89,7 +89,7 @@ ALTER SEQUENCE directors_id_seq OWNED BY directors.id;
 --
 
 CREATE TABLE films (
-    id integer NOT NULL,
+    id serial PRIMARY KEY,
     title character varying(255) NOT NULL,
     year integer NOT NULL,
     genre character varying(100) NOT NULL,
