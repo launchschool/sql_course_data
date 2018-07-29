@@ -132,16 +132,26 @@ SELECT pg_catalog.setval('directors_id_seq', 8, true);
 -- Data for Name: films; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO films VALUES ('Die Hard', 1988, 'action', 132, 1);
-INSERT INTO films VALUES ('Casablanca', 1942, 'drama', 102, 2);
-INSERT INTO films VALUES ('The Conversation', 1974, 'thriller', 113, 3);
-INSERT INTO films VALUES ('1984', 1956, 'scifi', 90, 4);
-INSERT INTO films VALUES ('Tinker Tailor Soldier Spy', 2011, 'espionage', 127, 5);
-INSERT INTO films VALUES ('The Birdcage', 1996, 'comedy', 118, 6);
-INSERT INTO films VALUES ('The Godfather', 1972, 'crime', 175, 3);
-INSERT INTO films VALUES ('12 Angry Men', 1957, 'drama', 96, 7);
-INSERT INTO films VALUES ('Wayne''s World', 1992, 'comedy', 95, 8);
-INSERT INTO films VALUES ('Let the Right One In', 2008, 'horror', 114, 4);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('Die Hard', 1988, 'action', 132, 1);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('Casablanca', 1942, 'drama', 102, 2);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('The Conversation', 1974, 'thriller', 113, 3);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('1984', 1956, 'scifi', 90, 4);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('Tinker Tailor Soldier Spy', 2011, 'espionage', 127, 5);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('The Birdcage', 1996, 'comedy', 118, 6);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('The Godfather', 1972, 'crime', 175, 3);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('12 Angry Men', 1957, 'drama', 96, 7);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('Wayne''s World', 1992, 'comedy', 95, 8);
+INSERT INTO films (title, year, genre, duration, director_id) 
+VALUES ('Let the Right One In', 2008, 'horror', 114, 4);
 --
 -- Name: directors_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
