@@ -151,7 +151,7 @@ VALUES ('12 Angry Men', 1957, 'drama', 96, 7);
 INSERT INTO films (title, year, genre, duration, director_id) 
 VALUES ('Wayne''s World', 1992, 'comedy', 95, 8);
 INSERT INTO films (title, year, genre, duration, director_id) 
-VALUES ('Let the Right One In', 2008, 'horror', 114, 4);
+VALUES ('Let the Right One In', 2008, 'horror', 114, 5);
 --
 -- Name: directors_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
